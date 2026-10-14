@@ -19,38 +19,52 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #f8fafc;
+            /* Fondo con gradiente animado y muy colorido */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #333; /* Texto oscuro para contrastar */
+        }
+
+        /* Animación del fondo */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 3rem 2.5rem;
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 420px;
             width: 90%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(56, 189, 248, 0.2);
+            transform: scale(1.02);
         }
 
         .badge {
             display: inline-block;
-            background: rgba(56, 189, 248, 0.15);
-            color: #38bdf8;
-            font-size: 0.85rem;
+            background: #e73c7e;
+            color: white;
+            font-size: 0.8rem;
             font-weight: 600;
             padding: 6px 16px;
             border-radius: 50px;
             margin-bottom: 1.5rem;
-            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
@@ -58,34 +72,16 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            /* Texto con gradiente */
+            background: linear-gradient(90deg, #ee7752, #23a6d5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         p {
-            color: #94a3b8;
+            color: #555;
             font-size: 1rem;
             line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 28px;
-            font-weight: 600;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-            transform: scale(1.03);
-            box-shadow: 0 15px 25px rgba(99, 102, 241, 0.5);
         }
     </style>
 </head>
@@ -93,8 +89,7 @@
     <div class="card">
         <span class="badge">En vivo en Vercel</span>
         <h1>¡Hola Mundo! 🚀</h1>
-        <p>Esta es mi primera página web construida con VS Code, subida a GitHub y desplegada automáticamente con Vercel.</p>
-        <a href="https://github.com" target="_blank" class="btn">Mi Perfil de GitHub</a>
+        <p>Esta es mi primera página web súper colorida, construida con VS Code y desplegada con Git y Vercel. ¡Mira qué vibrante se ve!</p>
     </div>
 </body>
 </html>
